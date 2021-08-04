@@ -4,9 +4,6 @@ get:
 	$(GO) get -d -t -v ./...
 
 test:
-	$(GO) test ./...
-
-test-ci:
 	$(GO) test -covermode=count -coverprofile=coverage.out ./...
 
 tidy:
@@ -29,4 +26,4 @@ precommit:
 	make test
 	make fmt
 
-.PHONY: get test test-ci tidy verify fmt build precommit
+.PHONY: get test tidy verify fmt build precommit
