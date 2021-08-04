@@ -1,4 +1,4 @@
-name: tests
+name: v2-tests
 
 on:
   push:
@@ -16,8 +16,8 @@ defaults:
 
 jobs:
 
-  tests:
-    name: tests
+  v2-tests:
+    name: v2-tests
     runs-on: ubuntu-latest
     steps:
 
