@@ -1,0 +1,28 @@
+GO:=go
+
+get:
+	$(GO) get -d -t -v ./...
+
+test:
+	$(GO) test ./...
+
+test-ci:
+	$(GO) test -covermode=count -coverprofile=coverage.out ./...
+
+tidy:
+	$(GO) mod tidy
+
+verify:
+	$(GO) mod verify
+
+fmt:
+	gofmt -s -w .
+
+precommit:
+	make get
+	make verify
+	make tidy
+	make test
+	make fmt
+
+.PHONY: get test test-ci tidy verify fmt precommit
