@@ -3,12 +3,8 @@ name: v1-tests
 on:
   push:
     branches: [ master ]
-    paths-ignore:
-      - "v2/**"
   pull_request:
     branches: [ master ]
-    paths-ignore:
-      - "v2/**"
 
 jobs:
 

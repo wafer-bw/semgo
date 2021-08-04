@@ -3,12 +3,8 @@ name: v2-tests
 on:
   push:
     branches: [ master ]
-    paths:
-      - "v2/**"
   pull_request:
     branches: [ master ]
-    paths:
-      - "v2/**"
 
 defaults:
   run:
