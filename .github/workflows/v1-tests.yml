@@ -2,13 +2,9 @@ name: v1-tests
 
 on:
   push:
-    branches: [ master ]
-    paths-ignore:
-      - "v2/**"
+    branches: [ v1 ]
   pull_request:
-    branches: [ master ]
-    paths-ignore:
-      - "v2/**"
+    branches: [ v1 ]
 
 jobs:
 
