@@ -1,5 +1,5 @@
 package semgo
 
 func SayHello() string {
-	return "hello v2"
+	return "hello v2!"
 }
