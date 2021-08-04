@@ -18,6 +18,10 @@ verify:
 fmt:
 	gofmt -s -w .
 
+build:
+	go build -v
+.PHONY: build
+
 precommit:
 	make get
 	make verify
@@ -25,4 +29,4 @@ precommit:
 	make test
 	make fmt
 
-.PHONY: get test test-ci tidy verify fmt precommit
+.PHONY: get test test-ci tidy verify fmt build precommit
